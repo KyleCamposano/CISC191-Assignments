@@ -63,9 +63,8 @@ public class MergeSort {
 
         Credit: <https://github.com/LuizGsa21/intro-to-java-10th-edition/blob/master/src/Chapter_23/MergeSort.java>
      */
-
     public static int[] mergeSort (int[] list){
-        // ensures method only works on list with two or more number.
+        // ensures method only works on list with two or more numbers.
         if (list.length > 1) {  // base case for recursion
 
             /*
