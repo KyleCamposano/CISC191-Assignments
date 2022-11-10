@@ -32,6 +32,8 @@ public class CourseDatabase {
             .execute(), .executeQuery(), .executeUpdate() runs different SQL statements
             refer to https://learn.microsoft.com/en-us/sql/connect/jdbc/reference/execute-method-sqlserverstatement
          */
+
+        // Course is red because there is no table yet. Creation of the table is part of the program.
         statement.executeUpdate("insert into Course(courseID, subjectID, courseNumber, title, numOfCredits) " +
                 "values ('0001', 'CISC', '191', 'Database', '4')");
 
