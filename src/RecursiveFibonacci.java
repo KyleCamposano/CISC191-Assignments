@@ -25,7 +25,8 @@ public class RecursiveFibonacci {
 
     /*
         Adds the sums of the two previous sumValues to find the value
-        of the current index (i).
+        of the current index (i). Alternatively, use two for-loops
+        to compare previous and current index until the last index.
      */
     public static int fibonacci(int i) {
         // Any negative index values returns -1.
