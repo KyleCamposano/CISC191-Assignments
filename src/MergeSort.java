@@ -1,6 +1,11 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ *  Prompts user to enter 10 digits, divides the array into
+ *  two halves, applies a merge sort on each half recursively,
+ *  merges sorted numbers. Returns sorted array.
+ */
 public class MergeSort {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
