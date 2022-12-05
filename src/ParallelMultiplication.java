@@ -46,7 +46,7 @@ public class ParallelMultiplication {
             this.row = (int) row;
         }
 
-        //  multiplies two matrices and stores result
+        //  multiplies two matrices and stores result.
         public static double[][] parallelMultiplyMatrix(double[][] a, double[][] b) {
             double[][] newResult = new double[a.length][b[0].length];
             CreateThreads.multiplyWithThreads(a, b, newResult);
@@ -54,6 +54,7 @@ public class ParallelMultiplication {
         }
 
         //  overrides run() from Runnable interface with calculation of two matrices
+        //  (col of 1st matrix * row of 2nd matrix) + next row & col
         @Override
         public void run() {
             for (int i = 0; i < matrix2[0].length; i++) {
@@ -78,6 +79,8 @@ public class ParallelMultiplication {
             -volatile (no local caching of shared var, changes instantly visible to all threads),
             -or atomic vars (all or nothing op, ensures end result is accurate).
          */
+
+        //  param takes in total rows for run(), each row is a task thread.
         public static void multiplyWithThreads(double[][] matrix1, double[][] matrix2, double[][] result) {
             List<Thread> threads = new ArrayList<>();
             int rows1 = matrix1.length;
